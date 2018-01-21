@@ -39,6 +39,7 @@ nav{
   opacity:.80;
   position: fixed;
   width:100%;
+  z-index:99;
 }
 
 nav ul{
@@ -70,6 +71,8 @@ header h1{
   font-size: 7em;
   font-weight: bolder;
   text-transform: uppercase;
+  margin:200px;
+  text-align: center;
 }
 
 #mouse{
@@ -143,12 +146,13 @@ header h1{
   background-size: cover;
   background-position: bottom;
   display:flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .opa{
   display: flex;
   background-color:rgba(5, 5, 5, 0.5); 
+  justify-content:space-between;
 }
 
 #services_left{
@@ -158,6 +162,8 @@ header h1{
   margin:20px 50px;
   padding: 20px;
   text-align: justify;
+  display:flex;
+  flex-direction: column;
 }
 
 #services_left h2{
@@ -180,9 +186,186 @@ header h1{
   font-size:3em;
   font-weight: bold;
   align-self:center;
-  padding-left:15%;
+  margin-right:100px;
   color:white;
 }
 
-#services_right h2{
+#contact{
+  background: url('../images/happy.jpeg');
+  background-size:cover;
+  width:100%;
+  height:750px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+#first-contact{
+  display:flex;
+  flex-direction: column;
+  margin-top:50px;
+  margin-left:50px;
+}
+
+#first-contact h3{
+  text-transform: uppercase;
+  color:white;
+  font-size:60px;
+}
+
+#box-grey{
+  background-color: rgba(179, 179, 179,0.8);
+  width:400px;
+  height:200px;
+}
+
+#box-grey i{
+  padding: 23px 20px 20px 70px;
+  font-size: 20px;
+}
+
+#second-contact{
+  display:flex;
+  width:300px;
+  align-self:center;
+  margin-right:80px;
+  margin-top:40px;
+
+}
+
+#second-contct form{
+  width:100%;
+  display:flex;
+}
+
+#second-contact form input{
+  font-family: 'Roboto', sans-serif;
+  font-size:1em;
+  margin: 10px 0px 10px 0px;
+  background:white;
+  outline: 0px;
+  border:solid thin grey;
+  width:100%;
+  height: 40px;
+  color:black;
+  padding-left:10px;
+}
+
+#second-contact form input:focus,#second-contact textarea:focus{
+  border: solid 2px darkgrey;
+}
+
+.textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size:1em;
+  height:100px;
+  width:100%;
+  padding:10px;
+  outline: 0px;
+}
+#second-contact input[type='submit']{
+  width:50%;
+  color:grey;
+  display:block;
+  float:right;
+}
+
+#second-contact input[type='submit']:hover,#second-contact form input:hover,#second-contact textarea:hover{
+  cursor:pointer;
+  font-size:1.2em;
+}
+
+footer{
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  background:black;
+  height:50px;
+}
+
+footer div{
+  display:inline-block;
+  color:white;
+  font-size:1em;
+}
+
+footer a{
+  text-decoration:none;
+  color:white;
+  margin:0;
+}
+
+#arrow{
+  position:fixed;
+  bottom: 50px;
+  right:30px;
+  color: red;
+  display:none;
+}
+
+#arrow:hover{
+  cursor:pointer;
+}
+
+/* -------------------- RESPONSIVE ------------------------ */
+@media screen and (max-width:900px){
+  header h1{
+    margin: 200px;
+    font-size: 5em;
+  }
+  #left_first, #left_second{
+    flex-direction: column;
+  }
+  #left_first div, #left_second div{
+    margin-top:20px;
+  }
+  #about{
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .opa{
+    flex-direction:column;
+    justify-content:center;
+    align-items: center
+  }
+  #services_left{
+    width:80%;
+  }
+  #services_right{
+    margin:0px;
+  }
+  #contact{
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  #first-contact{
+      justify-content: center;
+      margin:0px;
+      margin-bottom: 30px;
+  }
+  #second-contact{
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width:900px){
+  header h1{
+    margin: 200px;
+    font-size: 3em;
+  }
+  #mouse span{
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width:500px){
+  header h1{
+    font-size: 1.5em;
+    text-align: none;
+    margin:0px;
+  }
+  .opa{
+    width: 100%;
+  }
 }
