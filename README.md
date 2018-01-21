@@ -1,2 +1,2 @@
 # mockup2
-![mockup](/images/mockup.jpg)
+![imagen mockup](images/mockup.jpg"imagen mockup")
