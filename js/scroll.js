@@ -1,3 +1,10 @@
+scroll();
+arrowsUpDown();
+
+
+
+
+function scroll(){
 let arrow = document.getElementById('arrow');
 
 // HIDE OR SHOW ARROW
@@ -20,4 +27,34 @@ arrow.addEventListener('click',function(){
 		}
 	}
 });
+}
 
+function arrowsUpDown(){
+	let up = document.getElementById('up');
+	let down = document.getElementById('down');
+	var index = 1;
+	let array = [texto1,texto2,texto3,texto4];
+		up.addEventListener('click',function (){
+			
+				document.getElementById('texto'+index).style.display = 'none'; 
+				if(index>=4){
+				
+				index = 0;
+			}
+				index++;
+				document.getElementById('texto'+index).style.display = 'block';
+
+
+		});
+
+	    down.addEventListener('click',function () {
+	document.getElementById('texto'+index).style.display = 'none'; 
+				if(index<=1){
+				
+				index = 5;
+			}
+				index--;
+				document.getElementById('texto'+index).style.display = 'block';
+	});
+	
+}

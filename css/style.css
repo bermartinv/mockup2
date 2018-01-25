@@ -153,17 +153,17 @@ header h1{
   display: flex;
   background-color:rgba(5, 5, 5, 0.5); 
   justify-content:space-between;
+  width:100%;
 }
 
 #services_left{
-  width:40%;
-  background-color: lightgrey;
+  width:50%;
+  height:600px;
   opacity:0.80;
   margin:20px 50px;
-  padding: 20px;
   text-align: justify;
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 #services_left h2{
@@ -176,6 +176,43 @@ header h1{
 
 #services_left p{
   margin-top: 20px;
+}
+
+#texto_services_left{
+  background-color: lightgrey;
+  padding: 20px;
+  width:100%;
+}
+
+#botones_services_left{
+  align-self: flex-end;
+}
+
+#texto1{
+}
+
+#texto2{
+  display:none;
+}
+
+#texto3{
+  display:none;
+}
+#texto4{
+  display:none;
+}
+
+.fa-arrow-circle-up{
+  margin:10px;
+  color:aqua;
+}
+
+.fa-arrow-circle-up:hover{
+  cursor: pointer;
+}
+
+.down{
+  transform:rotate(180deg);
 }
 
 #services_right{
